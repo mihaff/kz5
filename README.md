@@ -36,7 +36,7 @@
 git clone https://github.com/mihaff/linautoml_business
 
 # Перейти в папку проекта
-cd kz5
+cd linautoml_business
 
 # Установить зависимости
 go mod tidy

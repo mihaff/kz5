@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Регистрация</title>
+    <link rel="stylesheet" href="/assets/css/register.css">
+</head>
+
+<body>
+    <section>
+        <div class="form-box">
+            <div class="form-value">
+                <form action="/api/users/register" method="POST" enctype="multipart/form-data">
+                    <h2>Регистрация</h2>
+                    <div class="inputbox">
+                        <ion-icon name="person-outline"></ion-icon>
+                        <input type="text" name="name" required> <!-- Added name attribute -->
+                        <label for="name">Имя</label>
+                    </div>
+                    <div class="inputbox">
+                        <ion-icon name="mail-outline"></ion-icon>
+                        <input type="email" name="email" required> <!-- Added name attribute -->
+                        <label for="email">Почта</label>
+                    </div>
+                    <div class="inputbox">
+                        <ion-icon name="lock-closed-outline"></ion-icon>
+                        <input type="password" name="password" required> <!-- Added name attribute -->
+                        <label for="password">Пароль</label>
+                    </div>
+                    <div class="inputbox">
+                        <ion-icon name="lock-closed-outline"></ion-icon>
+                        <input type="password" name="confirm_password" required> <!-- Added name attribute -->
+                        <label for="confirm_password">Подтвердить пароль</label>
+                    </div>
+                    <div class="agree">
+                        <label for="agreement"><input type="checkbox">Согласен(-на) с Политикой
+                            Конфиденциальности</label>
+                    </div>
+
+                    <button type="submit">Зарегистрироваться</button>
+                    <div class="register">
+                        <p>Есть аккаунт? <a href="/users/enter">Войти</a></p>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
+    <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
+</body>

@@ -1,0 +1,184 @@
+basePath: /api
+host: localhost:8080
+info:
+  contact:
+    email: pmfeklistova@edu.hse.ru
+    name: Polina Feklistovs
+  description: API-документация для реализации простейшей соцсети
+  title: Social Network API
+  version: "1.0"
+paths:
+  /posts:
+    get:
+      consumes:
+      - application/json
+      operationId: all-posts
+      produces:
+      - application/json
+      responses: {}
+      summary: REST ручка для получения всех постов
+      tags:
+      - posts
+  /posts/{id}:
+    get:
+      consumes:
+      - application/json
+      operationId: get-post-by-id
+      parameters:
+      - description: postId
+        in: path
+        name: id
+        required: true
+        type: integer
+      produces:
+      - application/json
+      responses: {}
+      summary: REST ручка получения поста по ID
+      tags:
+      - posts
+  /posts/{id}/delete:
+    delete:
+      consumes:
+      - application/json
+      operationId: delete-post
+      parameters:
+      - description: postId
+        in: path
+        name: id
+        required: true
+        type: integer
+      produces:
+      - application/json
+      responses: {}
+      summary: REST ручка удаления поста
+      tags:
+      - posts
+  /posts/{id}/edit:
+    put:
+      consumes:
+      - multipart/form-data
+      operationId: edit-post
+      parameters:
+      - description: projectName
+        in: formData
+        name: projectName
+        required: true
+        type: string
+      - description: postId
+        in: path
+        name: id
+        required: true
+        type: integer
+      produces:
+      - application/json
+      responses: {}
+      summary: REST ручка для изменения поста
+      tags:
+      - posts
+  /posts/newpost:
+    post:
+      consumes:
+      - multipart/form-data
+      operationId: newpost
+      parameters:
+      - description: projectName
+        in: formData
+        name: projectName
+        required: true
+        type: string
+      - description: author
+        in: formData
+        name: author
+        required: true
+        type: integer
+      produces:
+      - application/json
+      responses: {}
+      summary: REST ручка для создания нового поста
+      tags:
+      - posts
+  /users:
+    get:
+      consumes:
+      - application/json
+      operationId: all-users
+      produces:
+      - application/json
+      responses: {}
+      summary: REST ручка вывода всех пользователей
+      tags:
+      - users
+  /users/{id}:
+    get:
+      consumes:
+      - application/json
+      operationId: user-by-id
+      parameters:
+      - description: User ID
+        in: path
+        name: id
+        required: true
+        type: integer
+      produces:
+      - application/json
+      responses: {}
+      summary: REST ручка для получения пользователя по ID
+      tags:
+      - users
+  /users/{id}/delete:
+    delete:
+      consumes:
+      - application/json
+      operationId: delete-profile
+      parameters:
+      - description: User ID
+        in: path
+        name: id
+        required: true
+        type: integer
+      produces:
+      - application/json
+      responses: {}
+      summary: REST ручка для удаления профиля
+      tags:
+      - users
+  /users/{id}/edit:
+    put:
+      consumes:
+      - multipart/form-data
+      operationId: edit-profile
+      parameters:
+      - description: userId
+        in: path
+        name: id
+        required: true
+        type: integer
+      - description: username
+        in: formData
+        name: username
+        required: true
+        type: string
+      produces:
+      - application/json
+      responses: {}
+      summary: REST - ручка для изменения профиля
+      tags:
+      - users
+  /users/register:
+    post:
+      consumes:
+      - multipart/form-data
+      operationId: register
+      parameters:
+      - description: username
+        in: formData
+        name: username
+        required: true
+        type: string
+      produces:
+      - application/json
+      responses: {}
+      summary: REST ручка для регистрации нового пользователя
+      tags:
+      - users
+swagger: "2.0"

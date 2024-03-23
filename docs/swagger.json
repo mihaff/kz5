@@ -1,0 +1,269 @@
+{
+    "swagger": "2.0",
+    "info": {
+        "description": "API-документация для реализации простейшей соцсети",
+        "title": "Social Network API",
+        "contact": {
+            "name": "Polina Feklistova",
+            "email": "pmfeklistova@edu.hse.ru"
+        },
+        "version": "1.0"
+    },
+    "host": "localhost:8080",
+    "basePath": "/api",
+    "paths": {
+        "/posts": {
+            "get": {
+                "consumes": [
+                    "application/json"
+                ],
+                "produces": [
+                    "application/json"
+                ],
+                "tags": [
+                    "posts"
+                ],
+                "summary": "REST ручка для получения всех постов",
+                "operationId": "all-posts",
+                "responses": {}
+            }
+        },
+        "/posts/newpost": {
+            "post": {
+                "consumes": [
+                    "multipart/form-data"
+                ],
+                "produces": [
+                    "application/json"
+                ],
+                "tags": [
+                    "posts"
+                ],
+                "summary": "REST ручка для создания нового поста",
+                "operationId": "newpost",
+                "parameters": [
+                    {
+                        "type": "string",
+                        "description": "projectName",
+                        "name": "projectName",
+                        "in": "formData",
+                        "required": true
+                    },
+                    {
+                        "type": "integer",
+                        "description": "author",
+                        "name": "author",
+                        "in": "formData",
+                        "required": true
+                    }
+                ],
+                "responses": {}
+            }
+        },
+        "/posts/{id}": {
+            "get": {
+                "consumes": [
+                    "application/json"
+                ],
+                "produces": [
+                    "application/json"
+                ],
+                "tags": [
+                    "posts"
+                ],
+                "summary": "REST ручка получения поста по ID",
+                "operationId": "get-post-by-id",
+                "parameters": [
+                    {
+                        "type": "integer",
+                        "description": "postId",
+                        "name": "id",
+                        "in": "path",
+                        "required": true
+                    }
+                ],
+                "responses": {}
+            }
+        },
+        "/posts/{id}/delete": {
+            "delete": {
+                "consumes": [
+                    "application/json"
+                ],
+                "produces": [
+                    "application/json"
+                ],
+                "tags": [
+                    "posts"
+                ],
+                "summary": "REST ручка удаления поста",
+                "operationId": "delete-post",
+                "parameters": [
+                    {
+                        "type": "integer",
+                        "description": "postId",
+                        "name": "id",
+                        "in": "path",
+                        "required": true
+                    }
+                ],
+                "responses": {}
+            }
+        },
+        "/posts/{id}/edit": {
+            "put": {
+                "consumes": [
+                    "multipart/form-data"
+                ],
+                "produces": [
+                    "application/json"
+                ],
+                "tags": [
+                    "posts"
+                ],
+                "summary": "REST ручка для изменения поста",
+                "operationId": "edit-post",
+                "parameters": [
+                    {
+                        "type": "string",
+                        "description": "projectName",
+                        "name": "projectName",
+                        "in": "formData",
+                        "required": true
+                    },
+                    {
+                        "type": "integer",
+                        "description": "postId",
+                        "name": "id",
+                        "in": "path",
+                        "required": true
+                    }
+                ],
+                "responses": {}
+            }
+        },
+        "/users": {
+            "get": {
+                "consumes": [
+                    "application/json"
+                ],
+                "produces": [
+                    "application/json"
+                ],
+                "tags": [
+                    "users"
+                ],
+                "summary": "REST ручка вывода всех пользователей",
+                "operationId": "all-users",
+                "responses": {}
+            }
+        },
+        "/users/register": {
+            "post": {
+                "consumes": [
+                    "multipart/form-data"
+                ],
+                "produces": [
+                    "application/json"
+                ],
+                "tags": [
+                    "users"
+                ],
+                "summary": "REST ручка для регистрации нового пользователя",
+                "operationId": "register",
+                "parameters": [
+                    {
+                        "type": "string",
+                        "description": "username",
+                        "name": "username",
+                        "in": "formData",
+                        "required": true
+                    }
+                ],
+                "responses": {}
+            }
+        },
+        "/users/{id}": {
+            "get": {
+                "consumes": [
+                    "application/json"
+                ],
+                "produces": [
+                    "application/json"
+                ],
+                "tags": [
+                    "users"
+                ],
+                "summary": "REST ручка для получения пользователя по ID",
+                "operationId": "user-by-id",
+                "parameters": [
+                    {
+                        "type": "integer",
+                        "description": "User ID",
+                        "name": "id",
+                        "in": "path",
+                        "required": true
+                    }
+                ],
+                "responses": {}
+            }
+        },
+        "/users/{id}/delete": {
+            "delete": {
+                "consumes": [
+                    "application/json"
+                ],
+                "produces": [
+                    "application/json"
+                ],
+                "tags": [
+                    "users"
+                ],
+                "summary": "REST ручка для удаления профиля",
+                "operationId": "delete-profile",
+                "parameters": [
+                    {
+                        "type": "integer",
+                        "description": "User ID",
+                        "name": "id",
+                        "in": "path",
+                        "required": true
+                    }
+                ],
+                "responses": {}
+            }
+        },
+        "/users/{id}/edit": {
+            "put": {
+                "consumes": [
+                    "multipart/form-data"
+                ],
+                "produces": [
+                    "application/json"
+                ],
+                "tags": [
+                    "users"
+                ],
+                "summary": "REST - ручка для изменения профиля",
+                "operationId": "edit-profile",
+                "parameters": [
+                    {
+                        "type": "integer",
+                        "description": "userId",
+                        "name": "id",
+                        "in": "path",
+                        "required": true
+                    },
+                    {
+                        "type": "string",
+                        "description": "username",
+                        "name": "username",
+                        "in": "formData",
+                        "required": true
+                    }
+                ],
+                "responses": {}
+            }
+        }
+    }
+}

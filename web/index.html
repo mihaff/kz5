@@ -1,0 +1,358 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>LinAutoML сайт</title>
+  <link rel="stylesheet" href="/assets/css/index.css">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.css" />
+  <script type="text/javascript" src="http://code.jquery.com/jquery-latest.min.js"></script>
+</head>
+
+<body>
+  <!--Шапка сайта с лого и меню-->
+  <div class="overlay">
+    <button type="button" class="overlay__close-btn">
+      <?xml version="1.0" ?><svg style="enable-background:new 0 0 24 24;" version="1.1" viewBox="0 0 24 24"
+        xml:space="preserve" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+        <g id="info" />
+        <g id="icons">
+          <path
+            d="M14.8,12l3.6-3.6c0.8-0.8,0.8-2,0-2.8c-0.8-0.8-2-0.8-2.8,0L12,9.2L8.4,5.6c-0.8-0.8-2-0.8-2.8,0   c-0.8,0.8-0.8,2,0,2.8L9.2,12l-3.6,3.6c-0.8,0.8-0.8,2,0,2.8C6,18.8,6.5,19,7,19s1-0.2,1.4-0.6l3.6-3.6l3.6,3.6   C16,18.8,16.5,19,17,19s1-0.2,1.4-0.6c0.8-0.8,0.8-2,0-2.8L14.8,12z"
+            id="exit" />
+        </g>
+      </svg>
+    </button>
+    <nav class="overlay__nav">
+      <ul class="overlay__nav-list">
+        <li class="overlay__nav-list-item">
+          <a href="#" class="overlay__nav-link">
+            Главная
+          </a>
+        </li>
+        <li class="overlay__nav-list-item">
+          <a href="faq.html" class="overlay__nav-link">
+            Вопросы
+          </a>
+        </li>
+        <li class="overlay__nav-list-item">
+          <a href="about.html" class="overlay__nav-link">
+            О нас
+          </a>
+        </li>
+        <li class="overlay__nav-list-item overlay__nav-list-item--sub">
+          <span class="overlay__nav-link overlay__nav-link--submenu">
+            Профиль
+          </span>
+          <div class="overlay__nav-list-item-submenu">
+            <a id="loginLink" href="/users/enter" class="overlay__nav-link">
+              Вход
+            </a>
+            <a id="registerLink" href="/users/register" class="overlay__nav-link">
+              Регистрация
+            </a>
+          </div>
+        </li>
+
+        <li class="overlay__nav-list-item overlay__nav-list-item--sub">
+          <span class="overlay__nav-link overlay__nav-link--submenu">
+            Модели
+          </span>
+          <div class="overlay__nav-list-item-submenu">
+            <a id="classificationLink" href="/shipment/model_class" class="overlay__nav-link">
+              Классификация
+            </a>
+            <a id="regressionLink" href="/shipment/model_reg" class="overlay__nav-link">
+              Регрессия
+            </a>
+          </div>
+        </li>
+
+        <li class="overlay__nav-list-item overlay__nav-list-item--sub">
+          <span class="overlay__nav-link overlay__nav-link--submenu">
+            Документы
+          </span>
+          <div class="overlay__nav-list-item-submenu">
+            <div class="overlay__nav-list-item overlay__nav-list-item--sub">
+              <span class="overlay__nav-link overlay__nav-link--submenu">
+                ИИ Модели
+              </span>
+              <div class="overlay__nav-list-item-submenu">
+                <a href="/shipment/model_class" class="overlay__nav-link">
+                  Классификация
+                </a>
+                <a href="/shipment/model_reg" class="overlay__nav-link">
+                  Регрессия
+                </a>
+              </div>
+            </div>
+          </div>
+        </li>
+      </ul>
+
+
+
+
+
+
+
+    </nav>
+  </div>
+  <header class="header">
+    <div class="wrapper header__wrapper">
+      <a href="#" class="logo-link">
+        <img class="logo" src="/assets/logo image/LinAutoML.png" width="280p" height="90p">
+      </a>
+      <nav class="header__nav">
+        <ul class="header__nav-list">
+          <li class="header__nav-list-item">
+            <a href="#" title="Главная" onclick="slowScroll('#main')">Главная</a>
+          </li>
+          <li class="header__nav-list-item header__nav-list-item--dropdown dropdown dropdown">
+            <a href="#" class="dropbtn">Модели</a>
+            <div class="dropdown-content dropdown-content-3">
+              <a href="/shipment/model_class">Классификация</a>
+              <a href="/shipment/model_reg">Регрессия</a>
+            </div>
+          </li>
+          <li class="dropdown">
+            <a href="#">Документы</a>
+            <div class="dropdown-content-2">
+              <a href="#">ИИ Модели</a>
+              <div class="dropdown-content-side">
+                <a href="/shipment/model_class">Классификация</a>
+                <a href="/shipment/model_reg">Регрессия</a>
+              </div>
+            </div>
+          </li>
+          <li><a href="faq.html" title="Ответы на вопросы">Вопросы</a></li>
+          <li><a href="about.html" title="Блог о сервисе">О нас</a></li>
+          <li class="dropdown">
+            <a href="#" class="dropbtn">Профиль</a>
+            <div class="dropdown-content dropdown-content-last">
+              <a href="/users/enter">Вход</a>
+              <a href="/users/register">Регистрация</a>
+            </div>
+          </li>
+        </ul>
+      </nav>
+      <button type="button" class="header__burger-btn">
+        <svg class="ham hamRotate ham1" viewBox="0 0 100 100" width="80">
+          <path class="line top"
+            d="m 30,33 h 40 c 0,0 9.044436,-0.654587 9.044436,-8.508902 0,-7.854315 -8.024349,-11.958003 -14.89975,-10.85914 -6.875401,1.098863 -13.637059,4.171617 -13.637059,16.368042 v 40" />
+          <path class="line middle" d="m 30,50 h 40" />
+          <path class="line bottom"
+            d="m 30,67 h 40 c 12.796276,0 15.357889,-11.717785 15.357889,-26.851538 0,-15.133752 -4.786586,-27.274118 -16.667516,-27.274118 -11.88093,0 -18.499247,6.994427 -18.435284,17.125656 l 0.252538,40" />
+        </svg>
+      </button>
+    </div>
+  </header>
+
+  <!--Инфо-блок-->
+  <main id="main" class="main">
+    <section class="info-section">
+      <div class="wrapper info-section__wrapper">
+        <div class="image-block">
+          <img src="/assets/main/ai.png" style="width:50%">
+        </div>
+        <div class="image-block-2">
+          <img src="/assets/main/ai.png" style="width:100%">
+        </div>
+        <div class="info-section__group">
+          <div class="info-section__block">
+            <h2 class="info-section__block-heading">
+              Почему LinAutoML?
+            </h2>
+            <p class="info-section__block-text">
+              Никогда еще не было более захватывающего времени в сфере технологий.
+              Искусственный интеллект создает новые способы решения проблем, привлечения клиентов
+              и более эффективной работы. LinAutoML готов помочь организациям проложить
+              новый путь вперед в мире, в котором все больше внимания уделяется искусственному интеллекту.
+            </p>
+          </div>
+          <div class="info-section__block">
+            <h2 class="info-section__block-heading">
+              Заставьте свои данные работать
+            </h2>
+            <p class="info-section__block-text">
+              Это решение создано с использованием искусственного интеллекта и для него ,
+              поэтому вы можете получить новейшие инструменты для анализа машинного обучения,
+              обучения и развертывания пользовательских базовых моделей —
+              и все это связано с вашими бизнес-данными.
+            </p>
+          </div>
+        </div>
+        <a href="model.html" class="info-section__block-btn">Начать</a>
+      </div>
+    </section>
+    <section class="slider-section">
+      <div class="wrapper slider-section__wrapper">
+        <div class="swiper">
+          <div class="swiper-wrapper">
+            <div class="swiper-slide">
+              <img src="/assets/main/1.jpg" alt="
+              Cat 1" class="swiper-slide__img">
+              <div class="swiper-slide__content">
+                <h3 class="swiper-slide__heading">
+                  Создайте проект
+                </h3>
+                <p class="swiper-slide__text">
+                  Для того чтобы начать работу в LinAutoML, наведите на вкладку "Модели" для создания проекта в верхнем
+                  меню сайта.
+                  Появится форма выбора модели машинного обучения. Выберите модель.
+                </p>
+                <a href="model.html" class="btn swiper-slide__btn">
+                  Перейти к созданию проекта
+                </a>
+              </div>
+            </div>
+            <div class="swiper-slide">
+              <img src="/assets/main/2.jpg" alt="
+              Cat 1" class="swiper-slide__img">
+              <div class="swiper-slide__content">
+                <h3 class="swiper-slide__heading">
+                  Выберите алгоритм машинного обучения
+                </h3>
+                <p class="swiper-slide__text">
+                  После появится форма выбора алгоритма машинного обучения. Перед выбором ознакомьтесь с документацией.
+                </p>
+              </div>
+            </div>
+            <div class="swiper-slide">
+              <img src="/assets/main/3.jpg" alt="
+              Cat 1" class="swiper-slide__img">
+              <div class="swiper-slide__content">
+                <h3 class="swiper-slide__heading">
+                  Загрузите данные и выберите целевую категорию
+                </h3>
+                <p class="swiper-slide__text">
+                  Подготовьте и сохраните наборы данных. Загрузите подготовленные данные выбранного формата в
+                  специальную форму.
+                  Потребуется некоторое время для их обработки.
+                  После обработки введите название целевой колонки для обучения.
+                </p>
+              </div>
+            </div>
+            <div class="swiper-slide">
+              <img src="/assets/main/4.jpg" alt="
+              Cat 1" class="swiper-slide__img">
+              <div class="swiper-slide__content">
+                <h3 class="swiper-slide__heading">
+                  Запустите обучение
+                </h3>
+                <p class="swiper-slide__text">
+                  Запустите процесс обучения модели, который будет автоматически настраивать и обучать модель на ваших
+                  данных.
+                </p>
+              </div>
+            </div>
+            <div class="swiper-slide">
+              <img src="/assets/main/5.jpg" alt="
+              Cat 1" class="swiper-slide__img">
+              <div class="swiper-slide__content">
+                <h3 class="swiper-slide__heading">
+                  Проверьте результаты обучения
+                </h3>
+                <p class="swiper-slide__text">
+                  Проверить результат обучения можно в профиле во вкладке "Мои проекты", где хранятся все ваши проекты
+                  со статусом готовности.
+                  Если обучение завершено и статус проекта "Готов", то появится возможность скачать результаты.
+                </p>
+                <a href="/profile" class="btn swiper-slide__btn">
+                  Профиль
+                </a>
+              </div>
+            </div>
+          </div>
+          <div class="swiper-pagination"></div>
+          <div class="swiper-button-prev"></div>
+          <div class="swiper-button-next"></div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!--Copyright-->
+  <footer>
+    <p class="copyright-text">
+      2023 All rights reserved |
+      <a href="#">LinAutoML</a>
+    </p>
+  </footer>
+
+  <!--скрипт js-->
+
+  <!--навигация по главной странице через меню-->
+  <script src="https://code.jquery.com/jquery-3.7.1.min.js"
+    integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo=" crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.js"></script>
+  <script>
+
+    const burgerBtnEl = document.querySelector('.ham');
+    const overlayEl = document.querySelector('.overlay');
+    const closeBtnEl = document.querySelector('.overlay__close-btn')
+
+    burgerBtnEl.addEventListener('click', () => {
+      overlayEl.classList.add('active');
+      document.body.classList.add('no-scroll')
+      burgerBtnEl.classList.add('active');
+
+    })
+
+
+    closeBtnEl.addEventListener('click', () => {
+      overlayEl.classList.remove('active');
+      document.body.classList.remove('no-scroll')
+      burgerBtnEl.classList.remove('active');
+    })
+
+
+    function slowScroll(id) {
+      $('html, body').animate({
+        scrollTop: $(id).offset().top
+      }, 500);
+    }
+
+    $(document).on("scroll", function () {
+      if ($(window).scrollTop() === 0)
+        $("header").removeClass("fixed");
+      else
+        $("header").attr("class", "fixed");
+    });
+
+    const swiper = new Swiper('.swiper', {
+      direction: 'horizontal',
+      loop: true,
+      slidesPerView: 1,
+      pagination: {
+        el: '.swiper-pagination',
+      },
+      navigation: {
+        nextEl: '.swiper-button-next',
+        prevEl: '.swiper-button-prev',
+      },
+    });
+  </script>
+
+  <script>
+    // Перенаправление ссылок на наш сервер
+    const classificationLink = document.getElementById('classificationLink');
+    const regressionLink = document.getElementById('regressionLink');
+
+    const loginLink = document.getElementById('loginLink');
+    const registerLink = document.getElementById('registerLink');
+
+    // Задаем новые адреса для ссылок
+    classificationLink.href = '/shipment/model_class';
+    regressionLink.href = '/shipment/model_reg';
+
+    loginLink.href = '/users/enter';
+    registerLink.href = '/users/register';
+
+  </script>
+
+</body>
+
+</html>

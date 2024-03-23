@@ -1,0 +1,338 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Личный кабинет</title>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.css" />
+  <link rel="stylesheet" href="/assets/css/index.css">
+  <link rel="stylesheet" href="/assets/css/profile.css">
+</head>
+
+<body>
+  <!--Шапка сайта с лого и меню-->
+  <div class="overlay">
+    <button type="button" class="overlay__close-btn">
+      <?xml version="1.0" ?><svg style="enable-background:new 0 0 24 24;" version="1.1" viewBox="0 0 24 24"
+        xml:space="preserve" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+        <g id="info" />
+        <g id="icons">
+          <path
+            d="M14.8,12l3.6-3.6c0.8-0.8,0.8-2,0-2.8c-0.8-0.8-2-0.8-2.8,0L12,9.2L8.4,5.6c-0.8-0.8-2-0.8-2.8,0   c-0.8,0.8-0.8,2,0,2.8L9.2,12l-3.6,3.6c-0.8,0.8-0.8,2,0,2.8C6,18.8,6.5,19,7,19s1-0.2,1.4-0.6l3.6-3.6l3.6,3.6   C16,18.8,16.5,19,17,19s1-0.2,1.4-0.6c0.8-0.8,0.8-2,0-2.8L14.8,12z"
+            id="exit" />
+        </g>
+      </svg>
+    </button>
+    <nav class="overlay__nav">
+      <ul class="overlay__nav-list">
+        <li class="overlay__nav-list-item">
+          <a href="/home" class="overlay__nav-link">
+            Главная
+          </a>
+        </li>
+        <li class="overlay__nav-list-item">
+          <a href="faq.html" class="overlay__nav-link">
+            Вопросы
+          </a>
+        </li>
+        <li class="overlay__nav-list-item">
+          <a href="about.html" class="overlay__nav-link">
+            О нас
+          </a>
+        </li>
+        <li class="overlay__nav-list-item overlay__nav-list-item--sub">
+          <span class="overlay__nav-link overlay__nav-link--submenu">
+            Профиль
+          </span>
+          <div class="overlay__nav-list-item-submenu">
+            <a href="./enter.html" class="overlay__nav-link">
+              Вход
+            </a>
+            <a href="./registration.html" class="overlay__nav-link">
+              Регистрация
+            </a>
+          </div>
+        </li>
+
+        <li class="overlay__nav-list-item overlay__nav-list-item--sub">
+          <span class="overlay__nav-link overlay__nav-link--submenu">
+            Модели
+          </span>
+          <div class="overlay__nav-list-item-submenu">
+            <a href="/shipment/model_class" class="overlay__nav-link">
+              Классификация
+            </a>
+            <a href="/shipment/model_reg" class="overlay__nav-link">
+              Регрессия
+            </a>
+          </div>
+        </li>
+        <li class="overlay__nav-list-item overlay__nav-list-item--sub">
+          <span class="overlay__nav-link overlay__nav-link--submenu">
+            Документы
+          </span>
+          <div class="overlay__nav-list-item-submenu">
+            <div class="overlay__nav-list-item overlay__nav-list-item--sub">
+              <span class="overlay__nav-link overlay__nav-link--submenu">
+                ИИ Модели
+              </span>
+              <div class="overlay__nav-list-item-submenu">
+                <a href="class-docs.html" class="overlay__nav-link">
+                  Классификация
+                </a>
+                <a href="regres-docs.html" class="overlay__nav-link">
+                  Регрессия
+                </a>
+              </div>
+            </div>
+          </div>
+        </li>
+      </ul>
+
+
+
+
+
+
+
+    </nav>
+  </div>
+  <header class="header">
+    <div class="wrapper header__wrapper">
+      <a href="#" class="logo-link">
+        <img class="logo" src="/assets/logo image/LinAutoML.png" width="280p" height="90p">
+      </a>
+      <nav class="header__nav">
+        <ul class="header__nav-list">
+          <li class="header__nav-list-item">
+            <a href="/home" title="Главная" onclick="slowScroll('#main')">Главная</a>
+          </li>
+          <li class="header__nav-list-item header__nav-list-item--dropdown dropdown dropdown">
+            <a href="#" class="dropbtn">Модели</a>
+            <div class="dropdown-content dropdown-content-3">
+              <a href="/shipment/model_class">Классификация</a>
+              <a href="/shipment/model_reg">Регрессия</a>
+            </div>
+          </li>
+          <li class="dropdown">
+            <a href="#">Документы</a>
+            <div class="dropdown-content-2">
+              <a href="#">ИИ Модели</a>
+              <div class="dropdown-content-side">
+                <a href="class-docs.html">Классификация</a>
+                <a href="regres-docs.html">Регрессия</a>
+              </div>
+            </div>
+          </li>
+          <li><a href="faq.html" title="Ответы на вопросы">Вопросы</a></li>
+          <li><a href="about.html" title="Блог о сервисе">О нас</a></li>
+          <li class="dropdown">
+            <a href="#" class="dropbtn">Профиль</a>
+            <div class="dropdown-content dropdown-content-last">
+              <a href="/users/enter">Вход</a>
+              <a href="/users/register">Регистрация</a>
+            </div>
+          </li>
+        </ul>
+      </nav>
+      <button type="button" class="header__burger-btn">
+        <svg class="ham hamRotate ham1" viewBox="0 0 100 100" width="80">
+          <path class="line top"
+            d="m 30,33 h 40 c 0,0 9.044436,-0.654587 9.044436,-8.508902 0,-7.854315 -8.024349,-11.958003 -14.89975,-10.85914 -6.875401,1.098863 -13.637059,4.171617 -13.637059,16.368042 v 40" />
+          <path class="line middle" d="m 30,50 h 40" />
+          <path class="line bottom"
+            d="m 30,67 h 40 c 12.796276,0 15.357889,-11.717785 15.357889,-26.851538 0,-15.133752 -4.786586,-27.274118 -16.667516,-27.274118 -11.88093,0 -18.499247,6.994427 -18.435284,17.125656 l 0.252538,40" />
+        </svg>
+      </button>
+    </div>
+  </header>
+
+  <main class="main">
+    <section class="profile-section">
+      <div class="wrapper">
+        <div class="tab-list">
+          <button class="tab tab--active">Мой профиль</button>
+          <button class="tab">Мои проекты</button>
+        </div>
+        <div class="page-list">
+          <div class="page page--active">
+            <div class="profile-content">
+              <img src="https://funnymodo.com/wp-content/uploads/2016/09/1475258300_maxresdefault.jpg" alt="
+              Avatar" class="profile-avatar">
+              <div class="profile-body">
+                <h2 class="profile-name">Иван Иванов</h2>
+                <h3 class="profile-subheading">Почта</h3>
+                <input type="email" value="ivan@mail.ru" disabled class="profile-input profile-input--mail">
+                <h3 class="profile-subheading">Номер телефона</h3>
+                <input type="tel" value="+7 (123) 456-78-90" disabled class="profile-input profile-input--tel">
+                <div class="profile-menu">
+                  <button class="btn profile-menu-btn">
+                    Выйти из аккаунта
+                  </button>
+                  <button class="btn profile-menu-btn">
+                    Редактировать данные
+                  </button>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="page">
+            <div class="project-list">
+              <div class="project">
+                <div class="project-header">
+                  <div class="project-icon">
+                    <?xml version="1.0" ?><svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                      <path
+                        d="M22.47,18.82l-1-3.86h0L18.32,3.37a1,1,0,0,0-1.22-.71l-3.87,1a1,1,0,0,0-.73-.33H2.5a1,1,0,0,0-1,1v16a1,1,0,0,0,1,1h10a1,1,0,0,0,1-1v-8l2.2,8.22a1,1,0,0,0,1,.74,1.15,1.15,0,0,0,.26,0l4.83-1.29a1,1,0,0,0,.61-.47A1.05,1.05,0,0,0,22.47,18.82Zm-16,.55h-3v-2h3Zm0-4h-3v-6h3Zm0-8h-3v-2h3Zm5,12h-3v-2h3Zm0-4h-3v-6h3Zm0-8h-3v-2h3Zm2.25-1.74,2.9-.78.52,1.93-2.9.78Zm2.59,9.66-1.55-5.8,2.9-.78,1.55,5.8Zm1,3.86-.52-1.93,2.9-.78.52,1.93Z"
+                        fill="#6563ff" />
+                    </svg>
+                  </div>
+                  <h3 class="project-heading">
+                    Проект "Название"
+                  </h3>
+                  <div class="progress-bar progress-bar--0">
+                    <progress value="75" min="0" max="100" style="visibility:hidden;height:0;width:0;"></progress>
+                    0%
+                  </div>
+                </div>
+                <div class="project-content">
+                  <ol>
+                    <li>
+                      <p class="profile-content-failed">
+                        Обучение не завершено
+                      </p>
+                      <button class="btn">Подробнее</button>
+                    </li>
+                    </li>
+                  </ol>
+                </div>
+              </div>
+              <div class="project">
+                <div class="project-header">
+                  <div class="project-icon">
+                    <?xml version="1.0" ?><svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                      <path
+                        d="M22.47,18.82l-1-3.86h0L18.32,3.37a1,1,0,0,0-1.22-.71l-3.87,1a1,1,0,0,0-.73-.33H2.5a1,1,0,0,0-1,1v16a1,1,0,0,0,1,1h10a1,1,0,0,0,1-1v-8l2.2,8.22a1,1,0,0,0,1,.74,1.15,1.15,0,0,0,.26,0l4.83-1.29a1,1,0,0,0,.61-.47A1.05,1.05,0,0,0,22.47,18.82Zm-16,.55h-3v-2h3Zm0-4h-3v-6h3Zm0-8h-3v-2h3Zm5,12h-3v-2h3Zm0-4h-3v-6h3Zm0-8h-3v-2h3Zm2.25-1.74,2.9-.78.52,1.93-2.9.78Zm2.59,9.66-1.55-5.8,2.9-.78,1.55,5.8Zm1,3.86-.52-1.93,2.9-.78.52,1.93Z"
+                        fill="#6563ff" />
+                    </svg>
+                  </div>
+                  <h3 class="project-heading">
+                    Проект "Название"
+                  </h3>
+                  <div class="progress-bar">
+                    <progress value="100" min="0" max="100" style="visibility:hidden;height:0;width:0;">100%</progress>
+                    100%
+                  </div>
+                </div>
+                <div class="project-content">
+                  <ol>
+                    <li>
+                      <p class="project-content-success">
+                        Обучение успешно завершено
+                      </p>
+                      <button class="btn">Скачать</button>
+                    </li>
+                  </ol>
+                </div>
+              </div>
+              <button class="btn page-btn">Редактировать проекты</button>
+            </div>
+          </div>
+        </div>
+    </section>
+  </main>
+
+  <script src="https://code.jquery.com/jquery-3.7.1.min.js"
+    integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo=" crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.js"></script>
+  <script>
+
+
+
+    const tabs = document.querySelectorAll('.tab');
+    const pages = document.querySelectorAll('.page');
+
+
+    tabs.forEach((t, idx) => {
+      t.addEventListener('click', () => {
+        tabs.forEach(t => t.classList.remove('tab--active'))
+        pages.forEach(t => t.classList.remove('page--active'))
+
+        t.classList.add('tab--active')
+        pages[idx].classList.add('page--active')
+      })
+    })
+
+    const projects = document.querySelectorAll('.project');
+
+
+    projects.forEach(p => {
+      p.addEventListener('click', () => {
+        if (p.classList.contains('active')) {
+          p.classList.remove('active')
+          p.querySelector('.project-content').style.maxHeight = 0 + 'px'
+          return;
+        }
+        projects.forEach(p => {
+          p.classList.remove('active')
+          p.querySelector('.project-content').style.maxHeight = 0 + 'px'
+        })
+
+        p.classList.add('active')
+        p.querySelector('.project-content').style.maxHeight = p.querySelector('.project-content').scrollHeight + 50 + 'px';
+      })
+    })
+
+
+
+    const burgerBtnEl = document.querySelector('.ham');
+    const overlayEl = document.querySelector('.overlay');
+    const closeBtnEl = document.querySelector('.overlay__close-btn')
+
+    burgerBtnEl.addEventListener('click', () => {
+      overlayEl.classList.add('active');
+      document.body.classList.add('no-scroll')
+      burgerBtnEl.classList.add('active');
+
+    })
+
+
+    closeBtnEl.addEventListener('click', () => {
+      overlayEl.classList.remove('active');
+      document.body.classList.remove('no-scroll')
+      burgerBtnEl.classList.remove('active');
+    })
+
+
+    function slowScroll(id) {
+      $('html, body').animate({
+        scrollTop: $(id).offset().top
+      }, 500);
+    }
+
+    $(document).on("scroll", function () {
+      if ($(window).scrollTop() === 0)
+        $("header").removeClass("fixed");
+      else
+        $("header").attr("class", "fixed");
+    });
+
+    const swiper = new Swiper('.swiper', {
+      direction: 'horizontal',
+      loop: true,
+      slidesPerView: 1,
+      pagination: {
+        el: '.swiper-pagination',
+      },
+      navigation: {
+        nextEl: '.swiper-button-next',
+        prevEl: '.swiper-button-prev',
+      },
+    });
+  </script>
+</body>
+
+</html>

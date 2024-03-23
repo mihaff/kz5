@@ -1,0 +1,250 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>LinAutoML сайт</title>
+  <link rel="stylesheet" href="/assets/css/about.css">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.css" />
+  <script type="text/javascript" src="http://code.jquery.com/jquery-latest.min.js"></script>
+  </script>
+  <script asyn src="/assets/charts/js/webfont.js">
+  </script>
+  <script src="/assets/charts/js/Chart.min.js"></script>
+  <script>
+    function DrawTheChart(ChartData, ChartOptions, ChartId, ChartType) {
+      eval('var myLine = new Chart(document.getElementById(ChartId).getContext("2d"),{type:"' + ChartType + '",data:ChartData,options:ChartOptions});document.getElementById(ChartId).getContext("2d").stroke();')
+    }
+  </script>
+
+<body>
+  <!--Шапка сайта с лого и меню-->
+  <div class="overlay">
+    <button type="button" class="overlay__close-btn">
+      <?xml version="1.0" ?><svg style="enable-background:new 0 0 24 24;" version="1.1" viewBox="0 0 24 24"
+        xml:space="preserve" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+        <g id="info" />
+        <g id="icons">
+          <path
+            d="M14.8,12l3.6-3.6c0.8-0.8,0.8-2,0-2.8c-0.8-0.8-2-0.8-2.8,0L12,9.2L8.4,5.6c-0.8-0.8-2-0.8-2.8,0   c-0.8,0.8-0.8,2,0,2.8L9.2,12l-3.6,3.6c-0.8,0.8-0.8,2,0,2.8C6,18.8,6.5,19,7,19s1-0.2,1.4-0.6l3.6-3.6l3.6,3.6   C16,18.8,16.5,19,17,19s1-0.2,1.4-0.6c0.8-0.8,0.8-2,0-2.8L14.8,12z"
+            id="exit" />
+        </g>
+      </svg>
+    </button>
+    <nav class="overlay__nav">
+      <ul class="overlay__nav-list">
+        <li class="overlay__nav-list-item">
+          <a href="/home" class="overlay__nav-link">
+            Главная
+          </a>
+        </li>
+        <li class="overlay__nav-list-item">
+          <a href="faq.html" class="overlay__nav-link">
+            Вопросы
+          </a>
+        </li>
+        <li class="overlay__nav-list-item">
+          <a href="about.html" class="overlay__nav-link">
+            О нас
+          </a>
+        </li>
+        <li class="overlay__nav-list-item overlay__nav-list-item--sub">
+          <span class="overlay__nav-link overlay__nav-link--submenu">
+            Профиль
+          </span>
+          <div class="overlay__nav-list-item-submenu">
+            <a href="./enter.html" class="overlay__nav-link">
+              Вход
+            </a>
+            <a href="./registration.html" class="overlay__nav-link">
+              Регистрация
+            </a>
+          </div>
+        </li>
+
+        <li class="overlay__nav-list-item overlay__nav-list-item--sub">
+          <span class="overlay__nav-link overlay__nav-link--submenu">
+            Модели
+          </span>
+          <div class="overlay__nav-list-item-submenu">
+            <a href="/shipment/model_class" class="overlay__nav-link">
+              Классификация
+            </a>
+            <a href="/shipment/model_reg" class="overlay__nav-link">
+              Регрессия
+            </a>
+          </div>
+        </li>
+        <li class="overlay__nav-list-item overlay__nav-list-item--sub">
+          <span class="overlay__nav-link overlay__nav-link--submenu">
+            Документы
+          </span>
+          <div class="overlay__nav-list-item-submenu">
+            <div class="overlay__nav-list-item overlay__nav-list-item--sub">
+              <span class="overlay__nav-link overlay__nav-link--submenu">
+                ИИ Модели
+              </span>
+              <div class="overlay__nav-list-item-submenu">
+                <a href="class-docs.html" class="overlay__nav-link">
+                  Классификация
+                </a>
+                <a href="regres-docs.html" class="overlay__nav-link">
+                  Регрессия
+                </a>
+              </div>
+            </div>
+          </div>
+        </li>
+      </ul>
+
+
+
+
+
+
+
+    </nav>
+  </div>
+  <header class="header">
+    <div class="wrapper header__wrapper">
+      <a href="#" class="logo-link">
+        <img class="logo" src="/assets/logo image/LinAutoML.png" width="280p" height="90p">
+      </a>
+      <nav class="header__nav">
+        <ul class="header__nav-list">
+          <li class="header__nav-list-item">
+            <a href="/home" title="Главная" onclick="slowScroll('#main')">Главная</a>
+          </li>
+          <li class="header__nav-list-item header__nav-list-item--dropdown dropdown dropdown">
+            <a href="#" class="dropbtn">Модели</a>
+            <div class="dropdown-content dropdown-content-3">
+              <a href="/shipment/model_class">Классификация</a>
+              <a href="/shipment/model_reg">Регрессия</a>
+            </div>
+          </li>
+          <li class="dropdown">
+            <a href="#">Документы</a>
+            <div class="dropdown-content-2">
+              <a href="#">ИИ Модели</a>
+              <div class="dropdown-content-side">
+                <a href="class-docs.html">Классификация</a>
+                <a href="regres-docs.html">Регрессия</a>
+              </div>
+            </div>
+          </li>
+          <li><a href="faq.html" title="Ответы на вопросы">Вопросы</a></li>
+          <li><a href="about.html" title="Блог о сервисе">О нас</a></li>
+          <li class="dropdown">
+            <a href="#" class="dropbtn">Профиль</a>
+            <div class="dropdown-content dropdown-content-last">
+              <a href="/users/enter">Вход</a>
+              <a href="/users/register">Регистрация</a>
+            </div>
+          </li>
+        </ul>
+      </nav>
+      <button type="button" class="header__burger-btn">
+        <svg class="ham hamRotate ham1" viewBox="0 0 100 100" width="80">
+          <path class="line top"
+            d="m 30,33 h 40 c 0,0 9.044436,-0.654587 9.044436,-8.508902 0,-7.854315 -8.024349,-11.958003 -14.89975,-10.85914 -6.875401,1.098863 -13.637059,4.171617 -13.637059,16.368042 v 40" />
+          <path class="line middle" d="m 30,50 h 40" />
+          <path class="line bottom"
+            d="m 30,67 h 40 c 12.796276,0 15.357889,-11.717785 15.357889,-26.851538 0,-15.133752 -4.786586,-27.274118 -16.667516,-27.274118 -11.88093,0 -18.499247,6.994427 -18.435284,17.125656 l 0.252538,40" />
+        </svg>
+      </button>
+    </div>
+  </header>
+
+
+  <div class="chart">
+    <canvas id="chart-01" width="700" height="400"
+      style="background-color:rgba(0, 0, 0, 0);margin:0 auto;border-radius:0px;width:700px;height:400px;padding-left:0px;padding-right:0px;padding-top:0px;padding-bottom:0px"></canvas>
+    <script type="text/javascript" src="/assets/charts/chart1.js"></script>
+
+    <canvas id="chart-02" width="700" height="400"
+      style="background-color:rgba(0, 0, 0, 0);margin:0 auto;border-radius:0px;width:700px;height:400px;padding-left:0px;padding-right:0px;padding-top:0px;padding-bottom:0px"></canvas>
+    <script type="text/javascript" src="/assets/charts/chart2.js"></script>
+
+    <canvas id="chart-03" width="700" height="400"
+      style="background-color:rgba(0, 0, 0, 0);margin:0 auto;border-radius:0px;width:700px;height:400px;padding-left:0px;padding-right:0px;padding-top:0px;padding-bottom:0px"></canvas>
+    <script type="text/javascript" src="/assets/charts/chart3.js"></script>
+
+    <canvas id="chart-04" width="700" height="400"
+      style="background-color:rgba(0, 0, 0, 0);margin:0 auto;border-radius:0px;width:700px;height:400px;padding-left:0px;padding-right:0px;padding-top:0px;padding-bottom:0px"></canvas>
+    <script type="text/javascript" src="/assets/charts/chart4.js"></script>
+
+    <canvas id="chart-05" width="700" height="400"
+      style="background-color:rgba(0, 0, 0, 0);margin:0 auto;border-radius:0px;width:700px;height:400px;padding-left:0px;padding-right:0px;padding-top:0px;padding-bottom:0px"></canvas>
+    <script type="text/javascript" src="/assets/charts/chart5.js"></script>
+  </div>
+  <!--Copyright-->
+  <footer>
+    <p class="copyright-text">
+      2023 All rights reserved |
+      <a href="#">LinAutoML</a>
+    </p>
+  </footer>
+
+  <!--скрипт js-->
+  <script src="js/jquery-3.3.1.min.js"></script>
+  <script src="js/popper.min.js"></script>
+  <script src="js/bootstrap.min.js"></script>
+  <script src="js/jquery.sticky.js"></script>
+  <script src="js/main.js"></script>
+  <!--навигация по главной странице через меню-->
+  <script src="https://code.jquery.com/jquery-3.7.1.min.js"
+    integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo=" crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.js"></script>
+  <script>
+
+    const burgerBtnEl = document.querySelector('.ham');
+    const overlayEl = document.querySelector('.overlay');
+    const closeBtnEl = document.querySelector('.overlay__close-btn')
+
+    burgerBtnEl.addEventListener('click', () => {
+      overlayEl.classList.add('active');
+      document.body.classList.add('no-scroll')
+      burgerBtnEl.classList.add('active');
+
+    })
+
+
+    closeBtnEl.addEventListener('click', () => {
+      overlayEl.classList.remove('active');
+      document.body.classList.remove('no-scroll')
+      burgerBtnEl.classList.remove('active');
+    })
+
+
+    function slowScroll(id) {
+      $('html, body').animate({
+        scrollTop: $(id).offset().top
+      }, 500);
+    }
+
+    $(document).on("scroll", function () {
+      if ($(window).scrollTop() === 0)
+        $("header").removeClass("fixed");
+      else
+        $("header").attr("class", "fixed");
+    });
+
+    const swiper = new Swiper('.swiper', {
+      direction: 'horizontal',
+      loop: true,
+      slidesPerView: 1,
+      pagination: {
+        el: '.swiper-pagination',
+      },
+      navigation: {
+        nextEl: '.swiper-button-next',
+        prevEl: '.swiper-button-prev',
+      },
+    });
+  </script>
+
+</body>
+
+</html>

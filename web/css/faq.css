@@ -1,0 +1,494 @@
+@import url(https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;800;900&display=swap);
+
+:root {
+  --blue: #5353e0;
+  --bg: #fafafa5b;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  outline: none;
+  box-sizing: border-box;
+}
+
+body,
+html {
+  width: 100%;
+  height: 100%;
+  font-family: 'Poppins', sans-serif;
+  margin: 0;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+body {
+  min-width: 320px;
+  background-color: #fafafa;
+  background-repeat: no-repeat;
+  background: url('/assets/background/v904-nunny-012.jpg');
+  background-size: cover;
+}
+
+.image-block {
+  position: absolute;
+  z-index: -1;
+  opacity: 0.2;
+  left: -24px;
+  bottom: 240px;
+}
+
+.image-block-2 {
+  position: absolute;
+  z-index: -1;
+  opacity: 0.2;
+  right: 0;
+  transform: scaleX(-1);
+  max-width: 500px;
+}
+
+header.fixed,
+header {
+  width: 100%;
+  padding: 8px 0px;
+  background: var(--bg);
+  position: fixed;
+  left: 0;
+  top: 0;
+  border: 2px solid rgba(255, 255, 255, 0.5);
+  backdrop-filter: blur(15px);
+}
+
+.wrapper {
+  width: 100%;
+  height: 100%;
+  max-width: 1375px;
+  margin: 0 auto;
+  padding: 0px 15px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.header__nav {
+  margin-right: 65px;
+}
+
+.logo {
+  height: auto;
+  max-width: 213px;
+}
+
+.header__nav-list {
+  list-style-type: none;
+  display: flex;
+  align-items: center;
+  gap: 72px;
+}
+
+li a {
+  color: var(--blue);
+  font-size: 18px;
+  font-weight: 500;
+}
+
+/* Главный блок на сайте */
+#top {
+  width: 100%;
+  background-blend-mode: multiply;
+  background-color: #fff;
+  background-size: cover;
+  text-align: center;
+  color: #fff;
+}
+
+@media (min-width: 1001px) {
+  #top {
+    font-size: 3em;
+    height: 810px;
+  }
+}
+
+@media (max-width: 1000px) and (min-width: 651px) {
+  #top {
+    font-size: 2em;
+    height: 600px;
+  }
+}
+
+@media (max-width: 650px) {
+  #top {
+    font-size: 1.3em;
+    padding-top: 50%;
+    height: 500px;
+  }
+}
+
+@media (max-width: 450px) {
+  #top {
+    font-size: 0.9em;
+  }
+}
+
+#top h1 {
+  padding-top: 20%;
+}
+
+#top h3 {
+  color: #ccc;
+}
+
+
+
+/* Блок с контактами */
+#contacts {
+  width: 100%;
+  float: left;
+  padding-bottom: 50px;
+  padding-top: 50px;
+  border-top: transparent;
+  background: transparent;
+}
+
+h5 {
+  font-weight: lighter;
+}
+
+#contacts h5 {
+  font-size: 3em;
+  color: #454545;
+}
+
+#form_input {
+  margin-top: 10px;
+  margin-bottom: 10px;
+  font-size: 1.1em;
+}
+
+#form_input label {
+  color: #454545;
+  cursor: pointer;
+  font-size: 1.1em;
+}
+
+#form_input label>span {
+  color: #972b36;
+}
+
+#form_input input,
+#form_input textarea {
+  margin-bottom: 10px;
+  width: 70%;
+  padding: 10px 2%;
+  border-radius: 7px;
+  border: 2px solid silver;
+  color: #4a4a4a;
+}
+
+#form_input input:focus,
+#form_input textarea:focus {
+  border-color: #7c7a7a;
+}
+
+.btn {
+  float: left;
+  border-radius: 5px;
+  padding: 5px 9px;
+  font-size: 1.2em;
+  background-color: #5353e0;
+  text-shadow: #454545 0 0 2px;
+  cursor: pointer;
+  color: white;
+}
+
+.btn:hover {
+  background-color: #767478;
+}
+
+/* Адаптивность контактов*/
+@media (min-width: 1051px) {
+  #form_input {
+    width: 35%;
+    margin-left: 38%;
+  }
+}
+
+@media (max-width: 1050px) {
+  #form_input {
+    width: 80%;
+    margin-left: 10%;
+  }
+}
+
+/* Вопросы и ответы */
+
+#faq {
+  background-color: #fff;
+  border-top: 2px dashed #e4e3e3;
+  width: 100%;
+  float: left;
+  padding-top: 70px;
+  padding-bottom: 70px;
+}
+
+.faqPay,
+.faqInfo,
+.faqQar {
+  border: 2px solid #ccc;
+  border-radius: 15px;
+  padding: 20px;
+}
+
+#faq .title {
+  font-weight: lighter;
+  color: #713686;
+  font-size: 2.2em;
+  font-family: Trebuchet MS, Helvetica;
+}
+
+#faq .heading {
+  color: #7d7d7d;
+  font-size: 1.3em;
+  font-weight: bold;
+  font-family: Trebuchet MS, Helvetica;
+}
+
+#faq p {
+  font-family: Trebuchet MS, Helvetica;
+  color: #535253;
+  font-size: 0.95em;
+  padding-top: 20px;
+}
+
+.faqItem {
+  border: 2px solid #ccc;
+  border-radius: 15px;
+  padding: 20px;
+  cursor: pointer;
+  margin-bottom: 10px;
+}
+
+.faqItem .title {
+  font-weight: lighter;
+  color: #713686;
+  font-size: 2.2em;
+  font-family: Trebuchet MS, Helvetica;
+}
+
+.faqItem .heading {
+  color: #7d7d7d;
+  font-size: 1.3em;
+  font-weight: bold;
+  font-family: Trebuchet MS, Helvetica;
+}
+
+.faqItem p {
+  display: none;
+  font-family: Trebuchet MS, Helvetica;
+  color: #d3cdcd;
+  font-size: 0.95em;
+  padding-top: 20px;
+}
+
+.faqItem.open p {
+  display: block;
+}
+
+
+
+
+
+/* Адаптивность FAQ */
+@media (min-width: 801px) {
+  #faq div {
+    width: 20%;
+    margin-left: 6%;
+    float: left;
+  }
+}
+
+@media (max-width: 800px) {
+  #faq div {
+    width: 80%;
+    margin-left: 10%;
+    float: left;
+  }
+}
+
+/* Cлайдер */
+.slideshow-container {
+  margin: auto;
+}
+
+.prev,
+.next {
+  cursor: pointer;
+  position: absolute;
+  top: 50%;
+  width: auto;
+  padding: 16px;
+  margin-top: -22px;
+  color: white;
+  font-weight: bold;
+  font-size: 38px;
+  transition: 0.6s ease;
+  border-radius: 0 3px 3px 0;
+  user-select: none;
+}
+
+.next {
+  right: 0;
+  border-radius: 3px 0 0 3px;
+}
+
+
+/* Копирайтинг */
+.copyright {
+  font-size: 14px;
+  margin: 4px 0 20px 0;
+  text-align: center;
+  color: #2e3a44;
+}
+
+.box {
+  width: 80%;
+  margin: 50px auto;
+  margin-bottom: 20px;
+  background: #fff;
+  border-radius: 7px;
+  box-shadow: 1px 2px 4px rgba(0, 0, 0, .3);
+}
+
+.box .heading {
+  background: #5353e0;
+  border-radius: 7px 7px 0px 0px;
+  padding: 10px;
+  color: #fff;
+  text-align: center;
+}
+
+.faq-head {
+  background-color: rgba(255, 255, 255, 0.205);
+}
+
+.faqs {
+  padding: 0px 20px 20px;
+}
+
+::-webkit-details-marker {
+  float: right;
+  margin-top: 3px;
+}
+
+details {
+  background: #f6f6f6;
+  padding: 10px 20px;
+  border-radius: 7px;
+  margin-top: 20px;
+  font-size: 14px;
+  letter-spacing: 1px;
+  cursor: pointer;
+}
+
+details summary {
+  outline: none;
+}
+
+:root {
+  --blue: #5353e0;
+  --bg: #fafafa5b;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  outline: none;
+  box-sizing: border-box;
+}
+
+body,
+html {
+  width: 100%;
+  height: 100%;
+  font-family: 'Poppins', sans-serif;
+  margin: 0;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+body {
+  min-width: 320px;
+  margin-top: 150px;
+  background-color: #fafafa;
+  background-repeat: no-repeat;
+  background: url('/assets/background/v904-nunny-012.jpg');
+  background-size: cover;
+}
+
+.image-block {
+  position: absolute;
+  z-index: -1;
+  opacity: 0.2;
+  left: -24px;
+  bottom: 240px;
+}
+
+.image-block-2 {
+  position: absolute;
+  z-index: -1;
+  opacity: 0.2;
+  right: 0;
+  transform: scaleX(-1);
+  max-width: 500px;
+}
+
+header.fixed,
+header {
+  width: 100%;
+  padding: 8px 0px;
+  background: var(--bg);
+  position: fixed;
+  left: 0;
+  top: 0;
+  border: 2px solid rgba(255, 255, 255, 0.5);
+  backdrop-filter: blur(15px);
+}
+
+.wrapper {
+  width: 100%;
+  height: 100%;
+  max-width: 1375px;
+  margin: 0 auto;
+  padding: 0px 15px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.header__nav {
+  margin-right: 65px;
+}
+
+.logo {
+  height: auto;
+  max-width: 213px;
+}
+
+.header__nav-list {
+  list-style-type: none;
+  display: flex;
+  align-items: center;
+  gap: 72px;
+}
+
+li a {
+  color: var(--blue);
+  font-size: 18px;
+  font-weight: 500;
+}

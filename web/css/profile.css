@@ -1,0 +1,358 @@
+.main {
+    width: 100%;
+    margin-top: 100px;
+}
+
+body,
+html {
+    height: unset;
+}
+
+.profile-section .wrapper {
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: start;
+}
+
+
+.tab-list {
+    display: flex;
+    align-items: center;
+    gap: 24px;
+    margin: 24px 0px;
+}
+
+.tab {
+    background: none;
+    padding: 8px 14px;
+    border: 1px solid #5353e0;
+    border-radius: 12px;
+    font-size: 14px;
+    font-weight: 600;
+    color: #5353e0;
+    cursor: pointer;
+    transition: .23s;
+}
+
+.tab:hover {
+    background-color: #5353e0;
+    color: #fff;
+}
+
+.tab:active {
+    transform: scale(0.95);
+}
+
+.tab--active {
+    background-color: #5353e0;
+    color: #fff;
+}
+
+.page-list {
+    width: 100%;
+    position: relative;
+    overflow: hidden;
+}
+
+.page {
+    width: 100%;
+    position: absolute;
+    left: 0;
+    top: 0;
+    transform: translateX(100%);
+    transition: .23s;
+    opacity: 0;
+    visibility: hidden;
+    padding: 4px 0px;
+}
+
+.page--active {
+    position: static;
+    opacity: 1;
+    visibility: visible;
+    transform: translateX(0%);
+}
+
+.profile-avatar {
+    width: 275px;
+    height: 275px;
+    border-radius: 50%;
+    object-fit: cover;
+}
+
+.profile-content {
+    display: flex;
+    align-items: center;
+    gap: 36px;
+    border-radius: 4px;
+    background-color: #ffffff8d;
+    padding: 35px;
+    border-radius: 30px;
+}
+
+
+.profile-body {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: start;
+    gap: 24px;
+}
+
+.profile-input {
+    width: 100%;
+    max-width: 360px;
+    padding: 8px 16px;
+    padding-left: 48px;
+    background-size: 24px;
+    background-repeat: no-repeat;
+    background-position: left 6px center;
+    border-radius: 30px;
+}
+
+.profile-input--mail {
+    background-image: url("/assets/icons/mail.svg");
+}
+
+.profile-input--tel {
+    background-image: url("/assets/icons/tel.svg");
+}
+
+.profile-menu {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 24px;
+    width: 100%;
+    max-width: 802px;
+}
+
+.btn {
+    width: 100%;
+    padding: 15px;
+    background: #5353e0;
+    color: #eeebeb;
+    font-size: 16px;
+    font-weight: 500;
+    transition: .23s;
+    border: none;
+    border-radius: 24px;
+    cursor: pointer;
+    transition: .23s;
+}
+
+.profile-menu-btn {
+    outline: 1px solid #fff;
+}
+
+.profile-menu-btn:hover {
+    color: #fff !important;
+    outline: 1px solid #fff !important;
+}
+
+
+.btn:hover {
+    background-color: transparent;
+    outline: 1px solid #5353e0;
+    color: #5353e0;
+
+}
+
+.progress-bar {
+    width: 100px;
+    height: 100px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+    background:
+        radial-gradient(closest-side, white 79%, transparent 80% 100%),
+        conic-gradient(rgb(20, 195, 26) 100%, pink 0);
+    transition: .23s;
+}
+
+.progress-bar--0 {
+    background:
+        radial-gradient(closest-side, white 79%, transparent 80% 100%),
+        conic-gradient(rgb(0, 255, 21) 0%, pink 0);
+}
+
+
+
+.project-list {
+    width: 100%;
+    /* margin: 64px 0px; */
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: start;
+}
+
+.project {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: start;
+}
+
+.project-header {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 24px;
+    cursor: pointer;
+    transition: .23s;
+    box-shadow: 4px 0 6px rgba(0, 0, 0, 0.1);
+    margin-bottom: 2px;
+    background-color: #dbd4d46d;
+}
+
+.project-header:hover {
+    background-color: #afafb7a4;
+}
+
+.project-header:hover .project-heading {
+    color: #fff;
+}
+
+.project-header:hover .progress-bar {
+    outline: 1px solid #fff;
+}
+
+.project-icon svg {
+    width: 64px;
+    height: 64px;
+}
+
+.project-heading {
+    margin-left: 24px;
+    margin-right: auto;
+    font-size: 28px;
+    font-weight: 600;
+    color: #323234;
+}
+
+
+.project-content {
+    width: 100%;
+    transition: .23s;
+    max-height: 0px;
+    overflow: hidden;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: start;
+    gap: 24px;
+    color: #030303;
+    background-color: #dbd4d46d;
+    font-weight: 550;
+}
+
+/* .profile-content-failed{
+    color:red
+}
+
+.project-content-success{
+    color:green;
+} */
+
+.project.active .project-content {
+    padding: 24px;
+}
+
+.project-content ol {
+    width: 100%;
+}
+
+.project-content li {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    border-bottom: 1px solid #fff;
+    padding: 16px 24px;
+}
+
+.project-content li .btn {
+    width: fit-content;
+    padding: 14px 24px;
+    border: 1px solid #fff;
+}
+
+.project-content li .btn:hover {
+    color: #fff;
+}
+
+.page-btn {
+    height: 64px;
+    padding: 9px 16px;
+    margin-top: 24px;
+}
+
+@media (max-width:768px) {
+    .page-list {
+        margin: 0;
+    }
+
+    .profile-content {
+        flex-direction: column;
+
+        align-items: center;
+    }
+
+    .profile-body {
+        align-items: center;
+        text-align: center;
+    }
+}
+
+@media (max-width:675px) {
+    .project-header {
+        padding: 8px;
+    }
+
+    .project-heading {
+        font-size: 18px;
+    }
+
+    .progress-bar {
+        width: 48px;
+        height: 48px;
+    }
+
+    .project.active .project-content {
+        padding: 8px;
+    }
+}
+
+@media (max-width:490px) {
+    .project-icon svg {
+        width: 32px;
+        height: 32px;
+    }
+
+    .project-heading {
+        font-size: 16px;
+        margin-left: 8px;
+    }
+
+    .project-content li {
+        padding: 8px;
+        gap: 16px;
+    }
+}
+
+@media (max-width:475px) {
+    .profile-menu {
+        grid-template-columns: 1fr;
+        gap: 24px;
+        grid-template-rows: 64px;
+    }
+
+    .profile-avatar {
+        width: 256px;
+        height: 256px;
+    }
+}

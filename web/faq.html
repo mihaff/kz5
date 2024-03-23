@@ -1,0 +1,276 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Личный кабинет</title>
+  <link rel="stylesheet" href="/assets/css/index.css">
+  <link rel="stylesheet" href="/assets/css/faq.css">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.css" />
+  <script type="text/javascript" src="http://code.jquery.com/jquery-latest.min.js"></script>
+</head>
+
+<body>
+  <!--Шапка сайта с лого и меню-->
+  <div class="overlay">
+    <button type="button" class="overlay__close-btn">
+      <?xml version="1.0" ?><svg style="enable-background:new 0 0 24 24;" version="1.1" viewBox="0 0 24 24"
+        xml:space="preserve" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+        <g id="info" />
+        <g id="icons">
+          <path
+            d="M14.8,12l3.6-3.6c0.8-0.8,0.8-2,0-2.8c-0.8-0.8-2-0.8-2.8,0L12,9.2L8.4,5.6c-0.8-0.8-2-0.8-2.8,0   c-0.8,0.8-0.8,2,0,2.8L9.2,12l-3.6,3.6c-0.8,0.8-0.8,2,0,2.8C6,18.8,6.5,19,7,19s1-0.2,1.4-0.6l3.6-3.6l3.6,3.6   C16,18.8,16.5,19,17,19s1-0.2,1.4-0.6c0.8-0.8,0.8-2,0-2.8L14.8,12z"
+            id="exit" />
+        </g>
+      </svg>
+    </button>
+    <nav class="overlay__nav">
+      <ul class="overlay__nav-list">
+        <li class="overlay__nav-list-item">
+          <a href="/home" class="overlay__nav-link">
+            Главная
+          </a>
+        </li>
+        <li class="overlay__nav-list-item">
+          <a href="faq.html" class="overlay__nav-link">
+            Вопросы
+          </a>
+        </li>
+        <li class="overlay__nav-list-item">
+          <a href="about.html" class="overlay__nav-link">
+            О нас
+          </a>
+        </li>
+        <li class="overlay__nav-list-item overlay__nav-list-item--sub">
+          <span class="overlay__nav-link overlay__nav-link--submenu">
+            Профиль
+          </span>
+          <div class="overlay__nav-list-item-submenu">
+            <a href="./enter.html" class="overlay__nav-link">
+              Вход
+            </a>
+            <a href="./registration.html" class="overlay__nav-link">
+              Регистрация
+            </a>
+          </div>
+        </li>
+
+        <li class="overlay__nav-list-item overlay__nav-list-item--sub">
+          <span class="overlay__nav-link overlay__nav-link--submenu">
+            Модели
+          </span>
+          <div class="overlay__nav-list-item-submenu">
+            <a href="/shipment/model_class" class="overlay__nav-link">
+              Классификация
+            </a>
+            <a href="/shipment/model_reg" class="overlay__nav-link">
+              Регрессия
+            </a>
+          </div>
+        </li>
+        <li class="overlay__nav-list-item overlay__nav-list-item--sub">
+          <span class="overlay__nav-link overlay__nav-link--submenu">
+            Документы
+          </span>
+          <div class="overlay__nav-list-item-submenu">
+            <div class="overlay__nav-list-item overlay__nav-list-item--sub">
+              <span class="overlay__nav-link overlay__nav-link--submenu">
+                ИИ Модели
+              </span>
+              <div class="overlay__nav-list-item-submenu">
+                <a href="class-docs.html" class="overlay__nav-link">
+                  Классификация
+                </a>
+                <a href="regres-docs.html" class="overlay__nav-link">
+                  Регрессия
+                </a>
+              </div>
+            </div>
+          </div>
+        </li>
+      </ul>
+
+
+
+
+
+
+
+    </nav>
+  </div>
+  <header class="header">
+    <div class="wrapper header__wrapper">
+      <a href="#" class="logo-link">
+        <img class="logo" src="/assets/logo image/LinAutoML.png" width="280p" height="90p">
+      </a>
+      <nav class="header__nav">
+        <ul class="header__nav-list">
+          <li class="header__nav-list-item">
+            <a href="/home" title="Главная" onclick="slowScroll('#main')">Главная</a>
+          </li>
+          <li class="header__nav-list-item header__nav-list-item--dropdown dropdown dropdown">
+            <a href="#" class="dropbtn">Модели</a>
+            <div class="dropdown-content dropdown-content-3">
+              <a href="/shipment/model_class">Классификация</a>
+              <a href="/shipment/model_reg">Регрессия</a>
+            </div>
+          </li>
+          <li class="dropdown">
+            <a href="#">Документы</a>
+            <div class="dropdown-content-2">
+              <a href="#">ИИ Модели</a>
+              <div class="dropdown-content-side">
+                <a href="class-docs.html">Классификация</a>
+                <a href="regres-docs.html">Регрессия</a>
+              </div>
+            </div>
+          </li>
+          <li><a href="faq.html" title="Ответы на вопросы">Вопросы</a></li>
+          <li><a href="about.html" title="Блог о сервисе">О нас</a></li>
+          <li class="dropdown">
+            <a href="#" class="dropbtn">Профиль</a>
+            <div class="dropdown-content dropdown-content-last">
+              <a href="/users/enter">Вход</a>
+              <a href="/users/register">Регистрация</a>
+            </div>
+          </li>
+        </ul>
+      </nav>
+      <button type="button" class="header__burger-btn">
+        <svg class="ham hamRotate ham1" viewBox="0 0 100 100" width="80">
+          <path class="line top"
+            d="m 30,33 h 40 c 0,0 9.044436,-0.654587 9.044436,-8.508902 0,-7.854315 -8.024349,-11.958003 -14.89975,-10.85914 -6.875401,1.098863 -13.637059,4.171617 -13.637059,16.368042 v 40" />
+          <path class="line middle" d="m 30,50 h 40" />
+          <path class="line bottom"
+            d="m 30,67 h 40 c 12.796276,0 15.357889,-11.717785 15.357889,-26.851538 0,-15.133752 -4.786586,-27.274118 -16.667516,-27.274118 -11.88093,0 -18.499247,6.994427 -18.435284,17.125656 l 0.252538,40" />
+        </svg>
+      </button>
+    </div>
+  </header>
+
+
+
+  <!-- FAQ -->
+
+  <div class="box">
+    <p class="heading">Общее</p>
+    <div class="faqs">
+      <details>
+        <summary><b>Как войти в личный кабинет?</b></summary>
+        <p class="text">Для получения доступа к сервису вам необходимо зарегистрироваться в личном кабинете и войти в
+          свой профиль.</p>
+      </details>
+      <details>
+        <summary><b>Что входит в услуги сервиса?</b></summary>
+        <p class="text">Сервис предоставляет инструменты для автоматизации процесса машинного обучения,
+          делая его более доступным для широкой аудитории, включая тех, кто не является экспертом в области машинного
+          обучения.</p>
+      </details>
+      <details>
+        <summary><b>Где найти информацию, как пользоваться сервисом?</b></summary>
+        <p class="text">В нашем сервисе представлена подробная документация, которую вы можете найти в разделе
+          "Документы".</p>
+      </details>
+
+    </div>
+  </div>
+
+  <div class="box">
+    <p class="heading">Модели</p>
+    <div class="faqs">
+      <details>
+        <summary><b>Какие задачи машинного обучения решает ваш сервис?</b></summary>
+        <p class="text">Наш сайт решает задачи классификации и регрессии данных. Это два основных типа задач в машинном
+          обучении. Задача классификации -
+          определить к какому классу или категории принадлежит объект, например,
+          определение, является ли электронное письмо спамом или не спамом,
+          определение тональности текста (положительная, негативная или нейтральная).
+          Задача регрессии -прогнозирование числовых значений или непрерывных величин.
+          Предсказание цены недвижимости на основе различных параметров, прогнозирование дохода клиента, оценка
+          температуры по времени.</p>
+      </details>
+      <details>
+        <summary><b>Какие алгоритмы машинного обучения представлены в вашем сервисе?</b></summary>
+        <p class="text">Наш сервис предоставляет на выбор два алгоритма для каждого типа задачаи машинного обучения. Для
+          классификации - логистическая регрессия и
+          случайный лес, для задачи регрессии - линейная регрессия и метод опорных векторов.
+        </p>
+      </details>
+      <details>
+        <summary><b>В каком формате загружать данные?</b></summary>
+        <p class="text">Данные необходимо загрузить в .csv, .xlsx, .xls, .pkl. Размер загружаемых данных не должен
+          превышать 100 Мб.</p>
+      </details>
+
+    </div>
+  </div>
+
+  <!--Форма вопросов-->
+  <div id="contacts">
+    <center>
+      <h5>Задайте вопрос</h5>
+    </center>
+    <form id="form_input">
+      <label for="name">Имя <span>*</span></label><br>
+      <input type="text" placeholder="Введите имя" name="name" id="name"><br>
+      <label for="email">Электронная почта<span>*</span></label><br>
+      <input type="email" placeholder="Введите email" name="email" id="email"><br>
+      <label for="message">Вопросы/комментарии<span>*</span></label><br>
+      <textarea placeholder="Введите ваше сообщение" name="message" id="message"></textarea><br>
+      <div id="mess_send" class="btn">Отправить</div>
+    </form>
+  </div>
+
+
+  </script>
+  <!--скрипт js-->
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+  <!--навигация по главной странице через меню-->
+  <script>
+    function slowScroll(id) {
+      $('html, body').animate({
+        scrollTop: $(id).offset().top
+      }, 500);
+    }
+
+    $(document).on("scroll", function () {
+      if ($(window).scrollTop() === 0)
+        $("header").removeClass("fixed");
+      else
+        $("header").attr("class", "fixed");
+    });
+  </script>
+
+  <!--слайдер изображений-->
+  <script>
+    var slides = document.querySelectorAll('.slide');
+    var btns = document.querySelectorAll('input[name="radio-btn"]');
+    var currentSlide = 0;
+
+    function nextSlide() {
+      slides[currentSlide].classList.remove('active');
+      btns[currentSlide].checked = false;
+      currentSlide = (currentSlide + 1) % slides.length;
+      slides[currentSlide].classList.add('active');
+      btns[currentSlide].checked = true;
+    }
+
+    function repeat() {
+      setInterval(nextSlide, 5000);
+    }
+
+    repeat();
+
+    btns.forEach((btn, i) => {
+      btn.addEventListener('click', () => {
+        slides[currentSlide].classList.remove('active');
+        currentSlide = i;
+        slides[currentSlide].classList.add('active');
+      });
+    });
+  </script>
+</body>
+
+</html>

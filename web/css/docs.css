@@ -1,0 +1,110 @@
+header.fixed,
+header {
+  width: 100%;
+  padding: 8px 0px;
+  background: var(--bg);
+  position: relative;
+  border: 2px solid rgba(255, 255, 255, 0.5);
+  backdrop-filter: blur(15px);
+}
+
+.docs{
+    width: 100%;
+    display: grid;
+}
+.docs-container-nav{
+    width: 100%;
+    display: grid;
+    grid-template-columns: 20% 1fr; 
+    gap: 24px;
+    background-color: rgba(255, 255, 255, 0.664);
+    border: radius 2px;
+    margin-top: auto;
+}
+
+aside {
+    border-right: 1px solid #ccc;
+    padding: 20px;
+    box-shadow: 4px 0 6px rgba(0, 0, 0, 0.1);
+    z-index: 1; 
+    height: calc(100vh - 100px);
+    overflow-y: auto;
+    border-radius:10px;
+}
+
+aside li{
+    margin-bottom: 35px;
+}
+
+aside a {
+    text-decoration: none;
+    color: #333;
+    display: block;
+    height: 35px;
+    transition: 0.3s;
+    padding:5px;
+}
+
+aside a:hover {
+    text-align: center;
+    background-color: #b3b3c444;
+    border-radius: 4px;
+}
+
+
+nav ul {
+    margin-top: 15px;
+    list-style: none;
+    padding: 0;
+}
+
+h2 {
+    color: #5353e0;
+    margin-top: 30px;
+    margin-bottom: 20px;
+}
+
+section {
+    display: none;
+}
+
+section#section1 {
+    display: block; /* Отображаем "Введение" по умолчанию */
+}
+
+.grid-container {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-gap: 30px;
+    margin-top: 10px;
+    margin-right: 20px;
+    margin-bottom: 50px;
+    text-align: left;
+    padding: 10px;
+  }
+  
+  .grid-item {
+    border: 3px solid #f6f6f6;
+    padding: 20px;
+    box-shadow: 4px 0 6px rgba(0, 0, 0, 0.1);
+    border-radius:10px;
+    background-color:rgba(234, 230, 230, 0.17);
+  }
+
+  .grid-item--title{
+    margin-bottom: 10px;
+    color:#5353e0;
+    font-size: 18px;
+    font-weight: 700;
+  }
+
+  .grid-item--text{
+    color:#575454;
+  }
+  
+  .container-video{
+  margin-top: 50px;
+  margin-left: 280px;
+}
+
+

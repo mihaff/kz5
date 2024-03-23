@@ -33,7 +33,7 @@
 Зайдите в папку куда вы хотите установить проект и скачайте репозиторий:
 ```bash
 # Клонировать репозиторий
-git clone https://github.com/ellinaleshina/kz5
+git clone https://github.com/mihaff/kz5
 
 # Перейти в папку проекта
 cd kz5
